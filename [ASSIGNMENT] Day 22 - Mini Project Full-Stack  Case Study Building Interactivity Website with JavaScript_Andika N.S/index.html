@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - Classic T-Shirt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>MyStore</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="api.html">API Product</a>
+            <a href="#complaint">Komplain</a>
+            <span class="cart">Keranjang: <b id="cart-count">0</b></span>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="product-card">
+
+            <div class="product-image-area">
+                <img
+                    id="product-image"
+                    src="https://www.bing.com/th/id/OIP.L2bxNDtXsVng3RMwWllm1AHaHa?w=180&h=180&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    alt="Classic T-Shirt tampak belakang"
+                >
+
+                <div class="zoom-controls">
+                    <button type="button" id="zoom-out">−</button>
+                    <span id="zoom-level">100%</span>
+                    <button type="button" id="zoom-in">+</button>
+                    <button type="button" id="zoom-reset">Reset</button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <p class="category">MY STORE COLLECTION</p>
+                <h1 id="product-name">Classic T-Shirt</h1>
+                <p id="product-description">
+                    Kaos polos lengan pendek dengan tampilan simpel.
+                </p>
+
+                <h2 id="product-price" class="price"></h2>
+
+                <p>Stok tersedia: <b id="stock"></b></p>
+
+                <hr>
+
+                <label for="color">Pilih Warna</label>
+                <select id="color">
+                    <option value="Navy">Navy</option>
+                </select>
+
+                <div id="color-preview" class="color-preview">
+                    Warna dipilih: Navy
+                </div>
+
+                <label for="variation">Pilih Ukuran</label>
+                <select id="variation">
+                    <option value="M">M</option>
+                </select>
+
+                <label for="quantity">Jumlah Pembelian</label>
+                <input
+                    type="number"
+                    id="quantity"
+                    min="1"
+                    value="1"
+                >
+
+                <div class="subtotal-box">
+                    <span>Subtotal</span>
+                    <strong id="subtotal"></strong>
+                </div>
+
+                <p id="status-message" class="status"></p>
+
+                <button type="button" id="add-to-cart" class="primary-button">
+                    Tambahkan ke Keranjang
+                </button>
+            </div>
+
+        </section>
+
+        <section id="complaint" class="complaint-section">
+            <h2>Form Komplain Produk</h2>
+            <p>Isi formulir jika produk yang diterima tidak sesuai pesanan.</p>
+
+            <form id="complaint-form">
+
+                <label for="complaint-name">Nama Lengkap</label>
+                <input type="text" id="complaint-name" required>
+
+                <label for="order-number">Nomor Pesanan</label>
+                <input type="text" id="order-number" required>
+
+                <label for="complaint-type">Jenis Komplain</label>
+                <select id="complaint-type" required>
+                    <option value="">Pilih komplain</option>
+                    <option value="Warna tidak sesuai">Warna tidak sesuai</option>
+                    <option value="Ukuran tidak sesuai">Ukuran tidak sesuai</option>
+                    <option value="Produk rusak">Produk rusak</option>
+                    <option value="Produk tidak sesuai">Produk tidak sesuai</option>
+                </select>
+
+                <label for="received-color">Warna yang Diterima</label>
+                <select id="received-color" required>
+                    <option value="">Pilih warna</option>
+                    <option>Hitam</option>
+                    <option>Putih</option>
+                    <option>Khaky</option>
+                    <option>Navy</option>
+                    <option>Maroon</option>
+                    <option>Pink</option>
+                    <option>Sage Green</option>
+                </select>
+
+                <label for="expected-color">Warna yang Seharusnya</label>
+                <select id="expected-color" required>
+                    <option value="">Pilih warna</option>
+                    <option>Hitam</option>
+                    <option>Putih</option>
+                    <option>Khaky</option>
+                    <option>Navy</option>
+                    <option>Maroon</option>
+                    <option>Pink</option>
+                    <option>Sage Green</option>
+                </select>
+
+                <label for="received-size">Ukuran yang Diterima</label>
+                <select id="received-size" required>
+                    <option value="">Pilih ukuran</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>3L</option>
+                </select>
+
+                <label for="expected-size">Ukuran yang Seharusnya</label>
+                <select id="expected-size" required>
+                    <option value="">Pilih ukuran</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>3L</option>
+                </select>
+
+                <label for="complaint-detail">Detail Komplain</label>
+                <textarea id="complaint-detail" rows="4" required></textarea>
+
+                <button type="submit" class="primary-button">
+                    Kirim Komplain
+                </button>
+
+                <p id="complaint-status" class="status"></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 MyStore - Classic T-Shirt</p>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
