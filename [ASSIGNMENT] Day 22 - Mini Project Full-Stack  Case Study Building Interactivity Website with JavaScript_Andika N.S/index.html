@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product 1 | SimpleStore</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/functions.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="index.html">SimpleStore</a>
+
+        <nav>
+            <a class="active" href="index.html">Product 1</a>
+            <a href="api.html">Product 2 (API)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <p class="eyebrow">PRODUCT DETAIL 01 · HARDCODE</p>
+
+        <section class="product-layout">
+
+            <div class="product-image-wrap">
+                <img
+                    id="product-image"
+                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900"
+                    alt="Classic cotton t-shirt"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <span class="tag">Best Seller</span>
+
+                <h1 id="product-title">
+                    Classic Cotton T-Shirt
+                </h1>
+
+                <p class="muted" id="product-category">
+                    Apparel / T-Shirt
+                </p>
+
+                <p class="price" id="product-price">
+                    Rp150.000
+                </p>
+
+                <p id="product-description">
+                    Kaos katun nyaman untuk aktivitas sehari-hari.
+                </p>
+
+                <p class="stock" id="stock-info">
+                    Stok tersedia: 10
+                </p>
+
+                <label for="size">Pilih ukuran</label>
+
+                <select id="size">
+                    <option value="">Pilih ukuran</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+                <label for="quantity">Jumlah</label>
+
+                <div class="quantity-control">
+
+                    <button
+                        type="button"
+                        id="decrease"
+                        aria-label="Kurangi jumlah"
+                    >
+                        −
+                    </button>
+
+                    <input
+                        id="quantity"
+                        type="number"
+                        min="1"
+                        max="10"
+                        value="1"
+                        inputmode="numeric"
+                    >
+
+                    <button
+                        type="button"
+                        id="increase"
+                        aria-label="Tambah jumlah"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+                <p class="subtotal">
+                    Subtotal:
+                    <strong id="subtotal">Rp150.000</strong>
+                </p>
+
+                <button
+                    class="primary-button"
+                    id="add-to-cart"
+                    type="button"
+                >
+                    Pesan Sekarang
+                </button>
+
+                <p
+                    class="feedback"
+                    id="feedback"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </div>
+
+        </section>
+
+        <section class="database-note">
+            <h2>Integrasi SQL</h2>
+
+            <p>
+                Pesanan dari halaman ini akan dikirim ke backend
+                dan disimpan ke database SQLite.
+            </p>
+
+            <a href="/api/orders" target="_blank" rel="noopener">
+                Lihat data pesanan (JSON)
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 SimpleStore · Learning Project
+    </footer>
+
+</body>
+</html>

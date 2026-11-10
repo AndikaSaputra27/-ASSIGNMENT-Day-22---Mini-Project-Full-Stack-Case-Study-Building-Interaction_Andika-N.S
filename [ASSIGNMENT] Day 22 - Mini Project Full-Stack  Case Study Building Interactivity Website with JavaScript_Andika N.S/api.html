@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product 2 | SimpleStore</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/functions.js" defer></script>
+    <script src="js/api.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+
+        <a class="brand" href="index.html">
+            SimpleStore
+        </a>
+
+        <nav>
+            <a href="index.html">Product 1</a>
+            <a class="active" href="api.html">Product 2 (API)</a>
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <p class="eyebrow">
+            PRODUCT DETAIL 02 · API RESPONSE
+        </p>
+
+        <div id="loading" class="status-panel">
+            Sedang mengambil data produk...
+        </div>
+
+        <div
+            id="error-container"
+            class="status-panel error-panel"
+            hidden
+        >
+            <h2>Produk gagal dimuat</h2>
+
+            <p id="error-message">
+                Terjadi kesalahan saat mengambil data.
+            </p>
+
+            <button
+                class="primary-button"
+                id="retry-button"
+                type="button"
+            >
+                Coba Lagi
+            </button>
+        </div>
+
+        <section
+            id="product-section"
+            class="product-layout"
+            hidden
+        >
+
+            <div class="product-image-wrap">
+                <img
+                    id="product-image"
+                    src=""
+                    alt="Gambar produk"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <span class="tag" id="product-category">
+                    API Product
+                </span>
+
+                <h1 id="product-title"></h1>
+
+                <p class="muted" id="product-brand"></p>
+
+                <p class="price" id="product-price"></p>
+
+                <p id="product-description"></p>
+
+                <p class="stock" id="stock-info"></p>
+
+                <p class="muted" id="rating-info"></p>
+
+                <label for="quantity">Jumlah</label>
+
+                <div class="quantity-control">
+
+                    <button
+                        type="button"
+                        id="decrease"
+                        aria-label="Kurangi jumlah"
+                    >
+                        −
+                    </button>
+
+                    <input
+                        id="quantity"
+                        type="number"
+                        min="1"
+                        value="1"
+                        inputmode="numeric"
+                    >
+
+                    <button
+                        type="button"
+                        id="increase"
+                        aria-label="Tambah jumlah"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+                <p class="subtotal">
+                    Subtotal:
+                    <strong id="subtotal">-</strong>
+                </p>
+
+                <button
+                    class="primary-button"
+                    id="add-to-cart"
+                    type="button"
+                >
+                    Pesan Sekarang
+                </button>
+
+                <p
+                    class="feedback"
+                    id="feedback"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </div>
+
+        </section>
+
+        <section class="database-note">
+
+            <h2>Integrasi SQL</h2>
+
+            <p>
+                Pesanan produk API juga disimpan ke database SQLite
+                melalui backend.
+            </p>
+
+            <a href="/api/orders" target="_blank" rel="noopener">
+                Lihat data pesanan (JSON)
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 SimpleStore · Learning Project
+    </footer>
+
+</body>
+</html>
